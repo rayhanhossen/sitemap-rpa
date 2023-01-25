@@ -1,17 +1,7 @@
 /venv/
-/venvx/
 /idea/
 /.idea/
 /build/
-/process_files/
-/webdrivers/drivers/
-/workflow/logs/
-chromedriver.exe
-/files/
-/workflow/__pycache__/
-/utils/__pycache__/
-/apps/__pycache__/
 /dist/
-/XML/__pycache__/
 /xml_files/
 **/__pycache__/
