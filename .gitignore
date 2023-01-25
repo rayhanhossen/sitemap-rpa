@@ -11,3 +11,6 @@ chromedriver.exe
 /workflow/__pycache__/
 /utils/__pycache__/
 /apps/__pycache__/
+/dist/
+/xml_files/
+/XML/__pycache__/

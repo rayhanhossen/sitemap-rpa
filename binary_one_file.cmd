@@ -1,0 +1,1 @@
+pyinstaller --onefile workflow/main.py -n hgs_sitemap_rpa --clean
