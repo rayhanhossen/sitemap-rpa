@@ -1,4 +1,4 @@
-from XML.process_xml import ProcessXML
+from process_xml.process_xml import ProcessXML
 from config.config import ConfigParser
 from database.db_mysql import MySQLDatabase
 
