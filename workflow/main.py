@@ -43,5 +43,5 @@ if __name__ == '__main__':
             }
             sub_cat_list.append(sub_cat_dict)
 
-    process_xml = ProcessXML()
+    process_xml = ProcessXML(conf)
     process_xml.create_xml(product_list, parent_cat_list, sub_cat_list)

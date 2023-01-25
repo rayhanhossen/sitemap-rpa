@@ -3,15 +3,17 @@ from datetime import date
 
 
 class ProcessXML:
-    @staticmethod
-    def home_page(root, xml):
+    def __init__(self, conf):
+        self.conf = conf
+
+    def home_page(self, root, xml):
         # home page
         home = root.createElement('url')
         xml.appendChild(home)
 
         # loc element
         loc = root.createElement('loc')
-        loc_value = root.createTextNode("https://hgshydro.com/")
+        loc_value = root.createTextNode(f"{self.conf['site_host']}/")
         loc.appendChild(loc_value)
         home.appendChild(loc)
 
@@ -28,15 +30,14 @@ class ProcessXML:
         xhtml.setAttribute('href', '')
         home.appendChild(xhtml)
 
-    @staticmethod
-    def blog_page(root, xml):
+    def blog_page(self, root, xml):
         # home page
         home = root.createElement('url')
         xml.appendChild(home)
 
         # loc element
         loc = root.createElement('loc')
-        loc_value = root.createTextNode("https://hgshydro.com/blog")
+        loc_value = root.createTextNode(f"{self.conf['site_host']}/blog")
         loc.appendChild(loc_value)
         home.appendChild(loc)
 
@@ -53,15 +54,14 @@ class ProcessXML:
         xhtml.setAttribute('href', '')
         home.appendChild(xhtml)
 
-    @staticmethod
-    def franchise_page(root, xml):
+    def franchise_page(self, root, xml):
         # home page
         home = root.createElement('url')
         xml.appendChild(home)
 
         # loc element
         loc = root.createElement('loc')
-        loc_value = root.createTextNode("https://hgshydro.com/franchise")
+        loc_value = root.createTextNode(f"{self.conf['site_host']}/franchise")
         loc.appendChild(loc_value)
         home.appendChild(loc)
 
@@ -78,15 +78,14 @@ class ProcessXML:
         xhtml.setAttribute('href', '')
         home.appendChild(xhtml)
 
-    @staticmethod
-    def about_us_page(root, xml):
+    def about_us_page(self, root, xml):
         # home page
         home = root.createElement('url')
         xml.appendChild(home)
 
         # loc element
         loc = root.createElement('loc')
-        loc_value = root.createTextNode("https://hgshydro.com/about-us")
+        loc_value = root.createTextNode(f"{self.conf['site_host']}/about-us")
         loc.appendChild(loc_value)
         home.appendChild(loc)
 
@@ -103,15 +102,14 @@ class ProcessXML:
         xhtml.setAttribute('href', '')
         home.appendChild(xhtml)
 
-    @staticmethod
-    def career_page(root, xml):
+    def career_page(self, root, xml):
         # home page
         home = root.createElement('url')
         xml.appendChild(home)
 
         # loc element
         loc = root.createElement('loc')
-        loc_value = root.createTextNode("https://hgshydro.com/career")
+        loc_value = root.createTextNode(f"{self.conf['site_host']}/career")
         loc.appendChild(loc_value)
         home.appendChild(loc)
 
@@ -128,15 +126,14 @@ class ProcessXML:
         xhtml.setAttribute('href', '')
         home.appendChild(xhtml)
 
-    @staticmethod
-    def location_page(root, xml):
+    def location_page(self, root, xml):
         # home page
         home = root.createElement('url')
         xml.appendChild(home)
 
         # loc element
         loc = root.createElement('loc')
-        loc_value = root.createTextNode("https://hgshydro.com/location")
+        loc_value = root.createTextNode(f"{self.conf['site_host']}/location")
         loc.appendChild(loc_value)
         home.appendChild(loc)
 
@@ -153,15 +150,14 @@ class ProcessXML:
         xhtml.setAttribute('href', '')
         home.appendChild(xhtml)
 
-    @staticmethod
-    def product_page(root, xml):
+    def product_page(self, root, xml):
         # home page
         home = root.createElement('url')
         xml.appendChild(home)
 
         # loc element
         loc = root.createElement('loc')
-        loc_value = root.createTextNode("https://hgshydro.com/products")
+        loc_value = root.createTextNode(f"{self.conf['site_host']}/products")
         loc.appendChild(loc_value)
         home.appendChild(loc)
 
@@ -178,8 +174,7 @@ class ProcessXML:
         xhtml.setAttribute('href', '')
         home.appendChild(xhtml)
 
-    @staticmethod
-    def product_parent_category(root, xml, parent_cat_list):
+    def product_parent_category(self, root, xml, parent_cat_list):
         for data in parent_cat_list:
             # home page
             home = root.createElement('url')
@@ -187,7 +182,7 @@ class ProcessXML:
 
             # loc element
             loc = root.createElement('loc')
-            loc_value = root.createTextNode(f"https://hgshydro.com/category/{data.get('LOC')}")
+            loc_value = root.createTextNode(f"{self.conf['site_host']}/category/{data.get('LOC')}")
             loc.appendChild(loc_value)
             home.appendChild(loc)
 
@@ -204,8 +199,7 @@ class ProcessXML:
             xhtml.setAttribute('href', '')
             home.appendChild(xhtml)
 
-    @staticmethod
-    def product_sub_category(root, xml, sub_cat_list):
+    def product_sub_category(self, root, xml, sub_cat_list):
         for data in sub_cat_list:
             # home page
             home = root.createElement('url')
@@ -213,7 +207,7 @@ class ProcessXML:
 
             # loc element
             loc = root.createElement('loc')
-            loc_value = root.createTextNode(f"https://hgshydro.com/sub-category/{data.get('LOC')}")
+            loc_value = root.createTextNode(f"{self.conf['site_host']}/sub-category/{data.get('LOC')}")
             loc.appendChild(loc_value)
             home.appendChild(loc)
 
@@ -249,7 +243,7 @@ class ProcessXML:
 
             # loc element
             loc = root.createElement('loc')
-            loc_value = root.createTextNode(f"https://hgshydro.com/product-details/{data.get('LOC')}")
+            loc_value = root.createTextNode(f"{self.conf['site_host']}/product-details/{data.get('LOC')}")
             loc.appendChild(loc_value)
             url.appendChild(loc)
 

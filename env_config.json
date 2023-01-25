@@ -1,4 +1,5 @@
 {
+  "site_host": "https://hgshydro.com",
   "database_host": "localhost",
   "database_port": "3306",
   "database_name": "hgs",
