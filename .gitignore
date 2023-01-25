@@ -12,5 +12,4 @@ chromedriver.exe
 /utils/__pycache__/
 /apps/__pycache__/
 /dist/
-/xml_files/
 /XML/__pycache__/
