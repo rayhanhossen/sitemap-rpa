@@ -23,12 +23,12 @@ class ProcessXML:
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
-        # xhtml element
-        xhtml = root.createElement('xhtml:link')
-        xhtml.setAttribute('rel', 'alternate')
-        xhtml.setAttribute('hreflang', 'en')
-        xhtml.setAttribute('href', '')
-        home.appendChild(xhtml)
+        # # xhtml element
+        # xhtml = root.createElement('xhtml:link')
+        # xhtml.setAttribute('rel', 'alternate')
+        # xhtml.setAttribute('hreflang', 'en')
+        # xhtml.setAttribute('href', '')
+        # home.appendChild(xhtml)
 
     def blog_page(self, root, xml):
         # home page
@@ -47,12 +47,12 @@ class ProcessXML:
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
-        # xhtml element
-        xhtml = root.createElement('xhtml:link')
-        xhtml.setAttribute('rel', 'alternate')
-        xhtml.setAttribute('hreflang', 'en')
-        xhtml.setAttribute('href', '')
-        home.appendChild(xhtml)
+        # # xhtml element
+        # xhtml = root.createElement('xhtml:link')
+        # xhtml.setAttribute('rel', 'alternate')
+        # xhtml.setAttribute('hreflang', 'en')
+        # xhtml.setAttribute('href', '')
+        # home.appendChild(xhtml)
 
     def franchise_page(self, root, xml):
         # home page
@@ -71,12 +71,12 @@ class ProcessXML:
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
-        # xhtml element
-        xhtml = root.createElement('xhtml:link')
-        xhtml.setAttribute('rel', 'alternate')
-        xhtml.setAttribute('hreflang', 'en')
-        xhtml.setAttribute('href', '')
-        home.appendChild(xhtml)
+        # # xhtml element
+        # xhtml = root.createElement('xhtml:link')
+        # xhtml.setAttribute('rel', 'alternate')
+        # xhtml.setAttribute('hreflang', 'en')
+        # xhtml.setAttribute('href', '')
+        # home.appendChild(xhtml)
 
     def about_us_page(self, root, xml):
         # home page
@@ -95,12 +95,12 @@ class ProcessXML:
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
-        # xhtml element
-        xhtml = root.createElement('xhtml:link')
-        xhtml.setAttribute('rel', 'alternate')
-        xhtml.setAttribute('hreflang', 'en')
-        xhtml.setAttribute('href', '')
-        home.appendChild(xhtml)
+        # # xhtml element
+        # xhtml = root.createElement('xhtml:link')
+        # xhtml.setAttribute('rel', 'alternate')
+        # xhtml.setAttribute('hreflang', 'en')
+        # xhtml.setAttribute('href', '')
+        # home.appendChild(xhtml)
 
     def career_page(self, root, xml):
         # home page
@@ -119,12 +119,12 @@ class ProcessXML:
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
-        # xhtml element
-        xhtml = root.createElement('xhtml:link')
-        xhtml.setAttribute('rel', 'alternate')
-        xhtml.setAttribute('hreflang', 'en')
-        xhtml.setAttribute('href', '')
-        home.appendChild(xhtml)
+        # # xhtml element
+        # xhtml = root.createElement('xhtml:link')
+        # xhtml.setAttribute('rel', 'alternate')
+        # xhtml.setAttribute('hreflang', 'en')
+        # xhtml.setAttribute('href', '')
+        # home.appendChild(xhtml)
 
     def location_page(self, root, xml):
         # home page
@@ -143,12 +143,12 @@ class ProcessXML:
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
-        # xhtml element
-        xhtml = root.createElement('xhtml:link')
-        xhtml.setAttribute('rel', 'alternate')
-        xhtml.setAttribute('hreflang', 'en')
-        xhtml.setAttribute('href', '')
-        home.appendChild(xhtml)
+        # # xhtml element
+        # xhtml = root.createElement('xhtml:link')
+        # xhtml.setAttribute('rel', 'alternate')
+        # xhtml.setAttribute('hreflang', 'en')
+        # xhtml.setAttribute('href', '')
+        # home.appendChild(xhtml)
 
     def product_page(self, root, xml):
         # home page
@@ -167,12 +167,12 @@ class ProcessXML:
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
-        # xhtml element
-        xhtml = root.createElement('xhtml:link')
-        xhtml.setAttribute('rel', 'alternate')
-        xhtml.setAttribute('hreflang', 'en')
-        xhtml.setAttribute('href', '')
-        home.appendChild(xhtml)
+        # # xhtml element
+        # xhtml = root.createElement('xhtml:link')
+        # xhtml.setAttribute('rel', 'alternate')
+        # xhtml.setAttribute('hreflang', 'en')
+        # xhtml.setAttribute('href', '')
+        # home.appendChild(xhtml)
 
     def product_parent_category(self, root, xml, parent_cat_list):
         for data in parent_cat_list:
@@ -192,12 +192,12 @@ class ProcessXML:
             lastmod.appendChild(lastmod_value)
             home.appendChild(lastmod)
 
-            # xhtml element
-            xhtml = root.createElement('xhtml:link')
-            xhtml.setAttribute('rel', 'alternate')
-            xhtml.setAttribute('hreflang', 'en')
-            xhtml.setAttribute('href', '')
-            home.appendChild(xhtml)
+            # # xhtml element
+            # xhtml = root.createElement('xhtml:link')
+            # xhtml.setAttribute('rel', 'alternate')
+            # xhtml.setAttribute('hreflang', 'en')
+            # xhtml.setAttribute('href', '')
+            # home.appendChild(xhtml)
 
     def product_sub_category(self, root, xml, sub_cat_list):
         for data in sub_cat_list:
@@ -217,12 +217,12 @@ class ProcessXML:
             lastmod.appendChild(lastmod_value)
             home.appendChild(lastmod)
 
-            # xhtml element
-            xhtml = root.createElement('xhtml:link')
-            xhtml.setAttribute('rel', 'alternate')
-            xhtml.setAttribute('hreflang', 'en')
-            xhtml.setAttribute('href', '')
-            home.appendChild(xhtml)
+            # # xhtml element
+            # xhtml = root.createElement('xhtml:link')
+            # xhtml.setAttribute('rel', 'alternate')
+            # xhtml.setAttribute('hreflang', 'en')
+            # xhtml.setAttribute('href', '')
+            # home.appendChild(xhtml)
 
     def create_xml(self, product_list, parent_cat_list, sub_cat_list):
         root = minidom.Document()
@@ -254,12 +254,12 @@ class ProcessXML:
             lastmod.appendChild(lastmod_value)
             url.appendChild(lastmod)
 
-            # xhtml element
-            xhtml = root.createElement('xhtml:link')
-            xhtml.setAttribute('rel', 'alternate')
-            xhtml.setAttribute('hreflang', 'en')
-            xhtml.setAttribute('href', '')
-            url.appendChild(xhtml)
+            # # xhtml element
+            # xhtml = root.createElement('xhtml:link')
+            # xhtml.setAttribute('rel', 'alternate')
+            # xhtml.setAttribute('hreflang', 'en')
+            # xhtml.setAttribute('href', '')
+            # url.appendChild(xhtml)
 
         self.product_parent_category(root, xml, parent_cat_list)
         self.product_sub_category(root, xml, sub_cat_list)
