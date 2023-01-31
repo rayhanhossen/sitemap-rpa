@@ -1,5 +1,5 @@
 from xml.dom import minidom
-from datetime import date
+from datetime import date, datetime
 
 
 class ProcessXML:
@@ -19,7 +19,7 @@ class ProcessXML:
 
         # lastmod element
         lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode("2023-01-20T10:51:49")
+        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
@@ -43,7 +43,7 @@ class ProcessXML:
 
         # lastmod element
         lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode("2023-01-20T10:51:49")
+        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
@@ -67,7 +67,7 @@ class ProcessXML:
 
         # lastmod element
         lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode("2023-01-20T10:51:49")
+        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
@@ -91,7 +91,7 @@ class ProcessXML:
 
         # lastmod element
         lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode("2023-01-20T10:51:49")
+        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
@@ -115,7 +115,7 @@ class ProcessXML:
 
         # lastmod element
         lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode("2023-01-20T10:51:49")
+        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
@@ -139,7 +139,7 @@ class ProcessXML:
 
         # lastmod element
         lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode("2023-01-20T10:51:49")
+        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
@@ -163,7 +163,7 @@ class ProcessXML:
 
         # lastmod element
         lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode("2023-01-20T10:51:49")
+        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
         lastmod.appendChild(lastmod_value)
         home.appendChild(lastmod)
 
@@ -188,7 +188,7 @@ class ProcessXML:
 
             # lastmod element
             lastmod = root.createElement('lastmod')
-            lastmod_value = root.createTextNode(str(data.get('LASTMOD').isoformat()))
+            lastmod_value = root.createTextNode(str(data.get('LASTMOD').strftime('%Y-%m-%d')))
             lastmod.appendChild(lastmod_value)
             home.appendChild(lastmod)
 
@@ -213,7 +213,7 @@ class ProcessXML:
 
             # lastmod element
             lastmod = root.createElement('lastmod')
-            lastmod_value = root.createTextNode(str(data.get('LASTMOD').isoformat()))
+            lastmod_value = root.createTextNode(str(data.get('LASTMOD').strftime('%Y-%m-%d')))
             lastmod.appendChild(lastmod_value)
             home.appendChild(lastmod)
 
@@ -230,7 +230,8 @@ class ProcessXML:
         # root element
         xml = root.createElement('urlset')
         xml.setAttribute('xmlns', "http://www.sitemaps.org/schemas/sitemap/0.9")
-        xml.setAttribute('xmlns:xhtml', "http://www.w3.org/1999/xhtml")
+        xml.setAttribute('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
+        xml.setAttribute('xsi:schemaLocation', "http://www.sitemaps.org/schemas/sitemap/0.9http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd")
         root.appendChild(xml)
 
         self.home_page(root, xml)
@@ -249,7 +250,7 @@ class ProcessXML:
 
             # lastmod element
             lastmod = root.createElement('lastmod')
-            lastmod_value = root.createTextNode(str(data.get('LASTMOD').isoformat()))
+            lastmod_value = root.createTextNode(str(data.get('LASTMOD').strftime('%Y-%m-%d')))
             lastmod.appendChild(lastmod_value)
             url.appendChild(lastmod)
 
