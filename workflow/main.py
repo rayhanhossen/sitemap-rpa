@@ -1,6 +1,7 @@
 from process_xml.process_xml import ProcessXML
 from config.config import ConfigParser
 from database.db_mysql import MySQLDatabase
+from xml_to_csv.xml_to_csv_url import xml_to_csv
 
 conf = ConfigParser().get_config()
 db_obj = MySQLDatabase(conf)
@@ -44,4 +45,7 @@ if __name__ == '__main__':
             sub_cat_list.append(sub_cat_dict)
 
     process_xml = ProcessXML(conf)
-    process_xml.create_xml(product_list, parent_cat_list, sub_cat_list)
+    # generate xml file
+    file_name = process_xml.create_xml(product_list, parent_cat_list, sub_cat_list)
+    # generate xml to csv file
+    xml_to_csv(file_name)

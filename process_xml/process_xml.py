@@ -231,7 +231,8 @@ class ProcessXML:
         xml = root.createElement('urlset')
         xml.setAttribute('xmlns', "http://www.sitemaps.org/schemas/sitemap/0.9")
         xml.setAttribute('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
-        xml.setAttribute('xsi:schemaLocation', "http://www.sitemaps.org/schemas/sitemap/0.9http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd")
+        xml.setAttribute('xsi:schemaLocation',
+                         "http://www.sitemaps.org/schemas/sitemap/0.9http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd")
         root.appendChild(xml)
 
         self.home_page(root, xml)
@@ -277,3 +278,5 @@ class ProcessXML:
         # open file and write the xml
         with open(f"../xml_files/sitemap_{today.year}{today.month}{today.day}.xml", "wb") as f:
             f.write(xml_str)
+
+        return f"sitemap_{today.year}{today.month}{today.day}.xml"
