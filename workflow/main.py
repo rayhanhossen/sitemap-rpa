@@ -9,19 +9,19 @@ db_obj.connect()
 
 if __name__ == '__main__':
     # fetch product data from database
-    product_select_query = "SELECT * FROM products"
+    product_select_query = "SELECT * FROM products WHERE isDeleted=0"
     product_db_data = db_obj.select_data_from_table(product_select_query)
     product_list = list()
     if len(product_db_data) > 0:
         for data in product_db_data:
             product_dict = {
-                'LOC': data[33],
+                'LOC': data[31],
                 'LASTMOD': data[2]
             }
             product_list.append(product_dict)
 
     # fetch product parent category data from db
-    parent_cat_select_query = "SELECT * FROM product_parent_categories"
+    parent_cat_select_query = "SELECT * FROM product_parent_category WHERE isDeleted=0"
     parent_cat_db_data = db_obj.select_data_from_table(parent_cat_select_query)
     parent_cat_list = list()
     if len(parent_cat_db_data) > 0:
@@ -32,20 +32,8 @@ if __name__ == '__main__':
             }
             parent_cat_list.append(parent_cat_dict)
 
-    # fetch product sub category data from db
-    sub_cat_select_query = "SELECT * FROM product_sub_categories"
-    sub_cat_db_data = db_obj.select_data_from_table(sub_cat_select_query)
-    sub_cat_list = list()
-    if len(sub_cat_db_data) > 0:
-        for data in sub_cat_db_data:
-            sub_cat_dict = {
-                'LOC': data[4],
-                'LASTMOD': data[2]
-            }
-            sub_cat_list.append(sub_cat_dict)
-
     process_xml = ProcessXML(conf)
     # generate xml file
-    file_name = process_xml.create_xml(product_list, parent_cat_list, sub_cat_list)
+    file_name = process_xml.create_xml(product_list, parent_cat_list)
     # generate xml to csv file
     xml_to_csv(file_name)

@@ -21,4 +21,4 @@ def xml_to_csv(file_name_input):
     # working with date
     today = date.today()
     # Writing dataframe to csv
-    df.to_csv(f"../csv_files/hgs_indexing_{today.year}{today.month}{today.day}.csv", index=False)
+    df.to_csv(f"../csv_files/goldengal_indexing_{today.year}{today.month}{today.day}.csv", index=False)

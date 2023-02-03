@@ -30,214 +30,7 @@ class ProcessXML:
         # xhtml.setAttribute('href', '')
         # home.appendChild(xhtml)
 
-    def blog_page(self, root, xml):
-        # home page
-        home = root.createElement('url')
-        xml.appendChild(home)
-
-        # loc element
-        loc = root.createElement('loc')
-        loc_value = root.createTextNode(f"{self.conf['site_host']}/blog")
-        loc.appendChild(loc_value)
-        home.appendChild(loc)
-
-        # lastmod element
-        lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
-        lastmod.appendChild(lastmod_value)
-        home.appendChild(lastmod)
-
-        # # xhtml element
-        # xhtml = root.createElement('xhtml:link')
-        # xhtml.setAttribute('rel', 'alternate')
-        # xhtml.setAttribute('hreflang', 'en')
-        # xhtml.setAttribute('href', '')
-        # home.appendChild(xhtml)
-
-    def franchise_page(self, root, xml):
-        # home page
-        home = root.createElement('url')
-        xml.appendChild(home)
-
-        # loc element
-        loc = root.createElement('loc')
-        loc_value = root.createTextNode(f"{self.conf['site_host']}/franchise")
-        loc.appendChild(loc_value)
-        home.appendChild(loc)
-
-        # lastmod element
-        lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
-        lastmod.appendChild(lastmod_value)
-        home.appendChild(lastmod)
-
-        # # xhtml element
-        # xhtml = root.createElement('xhtml:link')
-        # xhtml.setAttribute('rel', 'alternate')
-        # xhtml.setAttribute('hreflang', 'en')
-        # xhtml.setAttribute('href', '')
-        # home.appendChild(xhtml)
-
-    def about_us_page(self, root, xml):
-        # home page
-        home = root.createElement('url')
-        xml.appendChild(home)
-
-        # loc element
-        loc = root.createElement('loc')
-        loc_value = root.createTextNode(f"{self.conf['site_host']}/about-us")
-        loc.appendChild(loc_value)
-        home.appendChild(loc)
-
-        # lastmod element
-        lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
-        lastmod.appendChild(lastmod_value)
-        home.appendChild(lastmod)
-
-        # # xhtml element
-        # xhtml = root.createElement('xhtml:link')
-        # xhtml.setAttribute('rel', 'alternate')
-        # xhtml.setAttribute('hreflang', 'en')
-        # xhtml.setAttribute('href', '')
-        # home.appendChild(xhtml)
-
-    def career_page(self, root, xml):
-        # home page
-        home = root.createElement('url')
-        xml.appendChild(home)
-
-        # loc element
-        loc = root.createElement('loc')
-        loc_value = root.createTextNode(f"{self.conf['site_host']}/career")
-        loc.appendChild(loc_value)
-        home.appendChild(loc)
-
-        # lastmod element
-        lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
-        lastmod.appendChild(lastmod_value)
-        home.appendChild(lastmod)
-
-        # # xhtml element
-        # xhtml = root.createElement('xhtml:link')
-        # xhtml.setAttribute('rel', 'alternate')
-        # xhtml.setAttribute('hreflang', 'en')
-        # xhtml.setAttribute('href', '')
-        # home.appendChild(xhtml)
-
-    def location_page(self, root, xml):
-        # home page
-        home = root.createElement('url')
-        xml.appendChild(home)
-
-        # loc element
-        loc = root.createElement('loc')
-        loc_value = root.createTextNode(f"{self.conf['site_host']}/location")
-        loc.appendChild(loc_value)
-        home.appendChild(loc)
-
-        # lastmod element
-        lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
-        lastmod.appendChild(lastmod_value)
-        home.appendChild(lastmod)
-
-        # # xhtml element
-        # xhtml = root.createElement('xhtml:link')
-        # xhtml.setAttribute('rel', 'alternate')
-        # xhtml.setAttribute('hreflang', 'en')
-        # xhtml.setAttribute('href', '')
-        # home.appendChild(xhtml)
-
-    def product_page(self, root, xml):
-        # home page
-        home = root.createElement('url')
-        xml.appendChild(home)
-
-        # loc element
-        loc = root.createElement('loc')
-        loc_value = root.createTextNode(f"{self.conf['site_host']}/products")
-        loc.appendChild(loc_value)
-        home.appendChild(loc)
-
-        # lastmod element
-        lastmod = root.createElement('lastmod')
-        lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
-        lastmod.appendChild(lastmod_value)
-        home.appendChild(lastmod)
-
-        # # xhtml element
-        # xhtml = root.createElement('xhtml:link')
-        # xhtml.setAttribute('rel', 'alternate')
-        # xhtml.setAttribute('hreflang', 'en')
-        # xhtml.setAttribute('href', '')
-        # home.appendChild(xhtml)
-
-    def product_parent_category(self, root, xml, parent_cat_list):
-        for data in parent_cat_list:
-            # home page
-            home = root.createElement('url')
-            xml.appendChild(home)
-
-            # loc element
-            loc = root.createElement('loc')
-            loc_value = root.createTextNode(f"{self.conf['site_host']}/category/{data.get('LOC')}")
-            loc.appendChild(loc_value)
-            home.appendChild(loc)
-
-            # lastmod element
-            lastmod = root.createElement('lastmod')
-            lastmod_value = root.createTextNode(str(data.get('LASTMOD').strftime('%Y-%m-%d')))
-            lastmod.appendChild(lastmod_value)
-            home.appendChild(lastmod)
-
-            # # xhtml element
-            # xhtml = root.createElement('xhtml:link')
-            # xhtml.setAttribute('rel', 'alternate')
-            # xhtml.setAttribute('hreflang', 'en')
-            # xhtml.setAttribute('href', '')
-            # home.appendChild(xhtml)
-
-    def product_sub_category(self, root, xml, sub_cat_list):
-        for data in sub_cat_list:
-            # home page
-            home = root.createElement('url')
-            xml.appendChild(home)
-
-            # loc element
-            loc = root.createElement('loc')
-            loc_value = root.createTextNode(f"{self.conf['site_host']}/sub-category/{data.get('LOC')}")
-            loc.appendChild(loc_value)
-            home.appendChild(loc)
-
-            # lastmod element
-            lastmod = root.createElement('lastmod')
-            lastmod_value = root.createTextNode(str(data.get('LASTMOD').strftime('%Y-%m-%d')))
-            lastmod.appendChild(lastmod_value)
-            home.appendChild(lastmod)
-
-            # # xhtml element
-            # xhtml = root.createElement('xhtml:link')
-            # xhtml.setAttribute('rel', 'alternate')
-            # xhtml.setAttribute('hreflang', 'en')
-            # xhtml.setAttribute('href', '')
-            # home.appendChild(xhtml)
-
-    def create_xml(self, product_list, parent_cat_list, sub_cat_list):
-        root = minidom.Document()
-
-        # root element
-        xml = root.createElement('urlset')
-        xml.setAttribute('xmlns', "http://www.sitemaps.org/schemas/sitemap/0.9")
-        xml.setAttribute('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
-        xml.setAttribute('xsi:schemaLocation',
-                         "http://www.sitemaps.org/schemas/sitemap/0.9http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd")
-        root.appendChild(xml)
-
-        self.home_page(root, xml)
-        self.product_page(root, xml)
-
+    def product_details(self, root, xml, product_list):
         for data in product_list:
             # url element
             url = root.createElement('url')
@@ -262,13 +55,88 @@ class ProcessXML:
             # xhtml.setAttribute('href', '')
             # url.appendChild(xhtml)
 
-        self.product_parent_category(root, xml, parent_cat_list)
-        self.product_sub_category(root, xml, sub_cat_list)
-        self.blog_page(root, xml)
-        self.franchise_page(root, xml)
-        self.about_us_page(root, xml)
-        self.career_page(root, xml)
-        self.location_page(root, xml)
+    def product_parent_category(self, root, xml, parent_cat_list):
+        for data in parent_cat_list:
+            # home page
+            home = root.createElement('url')
+            xml.appendChild(home)
+
+            # loc element
+            loc = root.createElement('loc')
+            loc_value = root.createTextNode(f"{self.conf['site_host']}/shop/category/{data.get('LOC')}")
+            loc.appendChild(loc_value)
+            home.appendChild(loc)
+
+            # lastmod element
+            lastmod = root.createElement('lastmod')
+            lastmod_value = root.createTextNode(str(data.get('LASTMOD').strftime('%Y-%m-%d')))
+            lastmod.appendChild(lastmod_value)
+            home.appendChild(lastmod)
+
+            # # xhtml element
+            # xhtml = root.createElement('xhtml:link')
+            # xhtml.setAttribute('rel', 'alternate')
+            # xhtml.setAttribute('hreflang', 'en')
+            # xhtml.setAttribute('href', '')
+            # home.appendChild(xhtml)
+
+    def static_url(self, root, xml, route_list):
+        for route in route_list:
+            # home page
+            home = root.createElement('url')
+            xml.appendChild(home)
+
+            # loc element
+            loc = root.createElement('loc')
+            loc_value = root.createTextNode(f"{self.conf['site_host']}/{route}")
+            loc.appendChild(loc_value)
+            home.appendChild(loc)
+
+            # lastmod element
+            lastmod = root.createElement('lastmod')
+            lastmod_value = root.createTextNode(str(date.today().strftime('%Y-%m-%d')))
+            lastmod.appendChild(lastmod_value)
+            home.appendChild(lastmod)
+
+            # # xhtml element
+            # xhtml = root.createElement('xhtml:link')
+            # xhtml.setAttribute('rel', 'alternate')
+            # xhtml.setAttribute('hreflang', 'en')
+            # xhtml.setAttribute('href', '')
+            # home.appendChild(xhtml)
+
+    def create_xml(self, product_list, parent_cat_list):
+        root = minidom.Document()
+
+        # root element
+        xml = root.createElement('urlset')
+        xml.setAttribute('xmlns', "http://www.sitemaps.org/schemas/sitemap/0.9")
+        xml.setAttribute('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
+        xml.setAttribute('xsi:schemaLocation',
+                         "http://www.sitemaps.org/schemas/sitemap/0.9http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd")
+        root.appendChild(xml)
+
+        self.home_page(root=root, xml=xml)
+        self.product_parent_category(root=root, xml=xml, parent_cat_list=parent_cat_list)
+        self.static_url(root=root, xml=xml, route_list=['shop'])
+        self.product_details(root=root, xml=xml, product_list=product_list)
+
+        route_list = [
+            'shop?routeName=giftGuide',
+            'style',
+            'shop?routeName=merch',
+            'learn',
+            'gallery',
+            'about',
+            'collection',
+            'contact',
+            'return-policy',
+            'privacy-policy',
+            'terms-condition',
+            'gift-card',
+            'promotional'
+        ]
+        self.static_url(root=root, xml=xml, route_list=route_list)
 
         xml_str = root.toprettyxml(indent="\t", encoding="UTF-8")
 
@@ -276,7 +144,7 @@ class ProcessXML:
         today = date.today()
 
         # open file and write the xml
-        with open(f"../xml_files/hgs_sitemap_{today.year}{today.month}{today.day}.xml", "wb") as f:
+        with open(f"../xml_files/goldengal_sitemap_{today.year}{today.month}{today.day}.xml", "wb") as f:
             f.write(xml_str)
 
-        return f"hgs_sitemap_{today.year}{today.month}{today.day}.xml"
+        return f"goldengal_sitemap_{today.year}{today.month}{today.day}.xml"

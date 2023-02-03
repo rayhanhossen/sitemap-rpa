@@ -1,8 +1,8 @@
 {
-  "site_host": "https://hgshydro.com",
+  "site_host": "https://goldengaljewelry.com",
   "database_host": "localhost",
   "database_port": "3306",
-  "database_name": "hgs",
+  "database_name": "goldengal",
   "database_username": "root",
   "database_password": ""
 }
