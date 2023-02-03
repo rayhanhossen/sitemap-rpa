@@ -1,5 +1,6 @@
 import pandas as pd
 import xml.dom.minidom as md
+from datetime import date
 
 
 def xml_to_csv(file_name_input):
@@ -17,6 +18,7 @@ def xml_to_csv(file_name_input):
 
     df = pd.DataFrame(rows, columns=cols)
 
+    # working with date
+    today = date.today()
     # Writing dataframe to csv
-    create_file_name = file_name.split('/')[-1]
-    df.to_csv(f"../csv_files/{create_file_name.split('.')[0]}.csv", index=False)
+    df.to_csv(f"../csv_files/indexing_{today.year}{today.month}{today.day}.csv", index=False)
