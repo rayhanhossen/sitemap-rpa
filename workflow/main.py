@@ -46,6 +46,7 @@ if __name__ == '__main__':
 
     process_xml = ProcessXML(conf)
     # generate xml file
-    file_name = process_xml.create_xml(product_list, parent_cat_list, sub_cat_list)
+    file_name = process_xml.create_xml(product_list=product_list, parent_cat_list=parent_cat_list,
+                                       sub_cat_list=sub_cat_list)
     # generate xml to csv file
-    xml_to_csv(file_name)
+    xml_to_csv(file_name=file_name)
