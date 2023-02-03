@@ -276,7 +276,7 @@ class ProcessXML:
         today = date.today()
 
         # open file and write the xml
-        with open(f"../xml_files/sitemap_{today.year}{today.month}{today.day}.xml", "wb") as f:
+        with open(f"../xml_files/hgs_sitemap_{today.year}{today.month}{today.day}.xml", "wb") as f:
             f.write(xml_str)
 
-        return f"sitemap_{today.year}{today.month}{today.day}.xml"
+        return f"hgs_sitemap_{today.year}{today.month}{today.day}.xml"
